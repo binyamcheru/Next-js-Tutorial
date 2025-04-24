@@ -1,17 +1,13 @@
 import React from "react";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import { Inter, Inconsolata, Roboto } from "next/font/google";
+import type { Metadata } from "next";
 
-// If loading a variable font, you don't need to specify the font weight
-const inter = Inter({ subsets: ['latin'] });
-const inconsolata = Inconsolata({subsets: ['latin']})
-
-// For non-variable fonts, specify weights
-const roboto = Roboto({
-  weight: '400',
-  subsets: ['latin'],
-});
+export const metadata: Metadata = {
+  title: "Next.js Project",
+  description: "A Next.js project with TypeScript and TailwindCSS.",
+  keywords: "Next.js, Typescript, TailwindCSS",
+}; 
 
 export default function RootLayout({
   children,
@@ -20,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inconsolata.className}>
+      <body>
         <Navbar />
         <main className="max-w-3xl mx-auto py-10">{children}</main>
       </body>
