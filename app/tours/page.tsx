@@ -20,7 +20,7 @@ const fetchTours = async () => {
 };
 
 async function ToursPage() {
-  const data = await fetchTours();
+  const data = await fetchTours(); 
   return (
     <section className="grid md:grid-cols-2 gap-8">
       {data.map((tour) => {
